@@ -2,6 +2,10 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <vector>
 
 struct Member{
     std::string email;
@@ -14,11 +18,21 @@ int main()
     std::cout << "Hello World!\n";
 }
 
+void read_row() {
+    std::fstream fileIn;
+    fileIn.open("HOSA Member List 24-25 - Form Responses 1.csv", std::ios::in);
+    std::string line;
+    std::stringstream s(line);
+    std::string email, fName, lName;
+    std::vector<Member> rows = { Member{} };
+    int count = 0;
 
-
-
-
-
+    while (std::getline(s, email, ',')) {
+        rows[count].email = email;
+    }
+    
+    fileIn.close();
+}
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

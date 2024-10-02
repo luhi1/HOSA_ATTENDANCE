@@ -129,6 +129,10 @@
   <ItemGroup>
     <ClCompile Include="HSA.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\Hosa Attendance Sheet - Form Responses 1(3).csv" />
+    <None Include="..\..\..\..\Downloads\HOSA Member List 24-25 - Form Responses 1.csv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
