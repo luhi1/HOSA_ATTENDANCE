@@ -3,6 +3,12 @@
 
 #include <iostream>
 
+struct Member{
+    std::string email;
+    std::string fName;
+    std::string lName;
+};
+
 int main()
 {
     std::cout << "Hello World!\n";
