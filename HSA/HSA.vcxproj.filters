@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\CSVs">
-      <UniqueIdentifier>{54a723fe-b9d2-48cd-a7cd-9fe74cb0e5be}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HSA.cpp">
@@ -24,10 +21,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Downloads\Hosa Attendance Sheet - Form Responses 1(3).csv">
-      <Filter>Source Files\CSVs</Filter>
+      <Filter>Source Files</Filter>
     </None>
     <None Include="..\..\..\..\Downloads\HOSA Member List 24-25 - Form Responses 1.csv">
-      <Filter>Source Files\CSVs</Filter>
+      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
 </Project>

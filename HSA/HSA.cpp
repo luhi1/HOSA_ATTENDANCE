@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-struct Member{
+struct Member {
     std::string email;
     std::string fName;
     std::string lName;
@@ -15,24 +15,38 @@ struct Member{
 
 int main()
 {
-    std::cout << "Hello World!\n";
-}
-
-void read_row() {
     std::fstream fileIn;
     fileIn.open("HOSA Member List 24-25 - Form Responses 1.csv", std::ios::in);
+    std::cout << fileIn.is_open();
     std::string line;
-    std::stringstream s(line);
-    std::string email, fName, lName;
     std::vector<Member> rows = { Member{} };
-    int count = 0;
 
-    while (std::getline(s, email, ',')) {
-        rows[count].email = email;
+    std::string temp;
+    while (fileIn >> temp)
+    {
+        rows.clear();
+        std::getline(fileIn, line);
+        std::stringstream s(line);
+
+        std::string email, fName, lName;
+        int count = 0;
+        std::cout << 1;
+
+        while (std::getline(s, email, ',')) {
+            rows[count].email = email;
+            std::getline(s, fName, ',');
+            rows[count].fName = fName;
+            std::getline(s, lName, ',');
+            rows[count].lName = lName;
+            count++;
+            rows.push_back(Member{});
+            std::cout << 1;
+        }
     }
-    
+    std::cout << rows[0].fName;
     fileIn.close();
 }
+
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
